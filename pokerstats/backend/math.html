@@ -1,0 +1,127 @@
+<div>
+    <h5>Texas Hold'em Probability Calculations</h5>
+    <p>The probability of winning in Texas Hold'em depends on:</p>
+    <ul>
+        <li>Your hole cards (2 cards)</li>
+        <li>The community cards (0-5 cards)</li>
+        <li>Number of opponents</li>
+        <li>Remaining cards in the deck</li>
+    </ul>
+    
+    <h6 class="mt-4">Hand Probabilities</h6>
+    <table class="table table-sm table-bordered">
+        <thead>
+            <tr>
+                <th>Hand</th>
+                <th>Probability</th>
+                <th>Odds</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Royal Flush</td>
+                <td>0.000154%</td>
+                <td>649,739 : 1</td>
+            </tr>
+            <tr>
+                <td>Straight Flush</td>
+                <td>0.00139%</td>
+                <td>72,192 : 1</td>
+            </tr>
+            <tr>
+                <td>Four of a Kind</td>
+                <td>0.024%</td>
+                <td>4,164 : 1</td>
+            </tr>
+            <tr>
+                <td>Full House</td>
+                <td>0.14%</td>
+                <td>693 : 1</td>
+            </tr>
+            <tr>
+                <td>Flush</td>
+                <td>0.20%</td>
+                <td>508 : 1</td>
+            </tr>
+            <tr>
+                <td>Straight</td>
+                <td>0.39%</td>
+                <td>254 : 1</td>
+            </tr>
+            <tr>
+                <td>Three of a Kind</td>
+                <td>2.11%</td>
+                <td>46.3 : 1</td>
+            </tr>
+            <tr>
+                <td>Two Pair</td>
+                <td>4.75%</td>
+                <td>20 : 1</td>
+            </tr>
+            <tr>
+                <td>One Pair</td>
+                <td>42.3%</td>
+                <td>1.37 : 1</td>
+            </tr>
+            <tr>
+                <td>High Card</td>
+                <td>50.1%</td>
+                <td>0.995 : 1</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h6 class="mt-4">Common Draw Probabilities</h6>
+    <table class="table table-sm table-bordered">
+        <thead>
+            <tr>
+                <th>Draw Type</th>
+                <th>After Flop</th>
+                <th>After Turn</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Flush Draw (4 cards)</td>
+                <td>~35%</td>
+                <td>~19%</td>
+            </tr>
+            <tr>
+                <td>Open-Ended Straight Draw</td>
+                <td>~32%</td>
+                <td>~17%</td>
+            </tr>
+            <tr>
+                <td>Gutshot Straight Draw</td>
+                <td>~16%</td>
+                <td>~8.5%</td>
+            </tr>
+            <tr>
+                <td>Set to Full House/Quads</td>
+                <td>~33%</td>
+                <td>~17%</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h6 class="mt-4">Starting Hand Win Probabilities</h6>
+    <p>Top 5 starting hands (heads-up):</p>
+    <ol>
+        <li>A♠A♥ - ~85% win rate</li>
+        <li>K♠K♥ - ~82% win rate</li>
+        <li>Q♠Q♥ - ~80% win rate</li>
+        <li>J♠J♥ - ~77% win rate</li>
+        <li>A♠K♠ (suited) - ~67% win rate</li>
+    </ol>
+    
+    <h6 class="mt-4">Monte Carlo Simulation</h6>
+    <p>For complex scenarios, we use Monte Carlo simulation:</p>
+    <ol>
+        <li>Start with known cards (your hand + community cards)</li>
+        <li>Randomly deal remaining community cards from deck</li>
+        <li>Randomly deal opponents' hole cards from remaining deck</li>
+        <li>Evaluate all hands and determine winner</li>
+        <li>Repeat thousands of times for statistical accuracy</li>
+    </ol>
+    <p>Win probability = (Number of wins / Total simulations) × 100%</p>
+</div>
